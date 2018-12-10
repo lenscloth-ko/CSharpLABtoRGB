@@ -23,6 +23,15 @@ namespace LABtoRGB.Lib
             XYZColor output = converter.ToXYZ(input);
         } // end ColorConversion
 
+        private void LabToRGB()
+        {
+            LabColor input = new LabColor(10, 20, 30);
+
+            var converter = new ColourfulConverter { WhitePoint = Illuminants.D65 };
+
+            RGBColor output = converter.ToRGB(input);
+        }
+
         /// <summary>
         /// Chromatic adaptation
         /// The adaptation can be also performed alone (e.g. from CIELAB D50 to CIELAB D65).

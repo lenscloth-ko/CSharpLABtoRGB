@@ -49,7 +49,7 @@ namespace LABtoRGB.Lib
             //var converter = new ColourfulConverter { TargetRGBWorkingSpace = RGBWorkingSpaces.AdobeRGB1998 };
 
             //RGBColor output = converter.Adapt(input);
-        }
+        } // end ConversionBetweenRGBWorkingSpaces
 
         /// <summary>
         /// CCT approximation
@@ -63,7 +63,20 @@ namespace LABtoRGB.Lib
             //ChromaticityCoordinates chromaticity = converter.GetChromaticityOfCCT(5454); // x=0.33, y=0.34
 
             //double cct = converter.GetCCTOfChromaticity(new ChromaticityCoordinates(0.31271, 0.32902)); // cca 6500 K 
-        }
+        } // end CCTApproximation
+
+        /// <summary>
+        /// Color difference
+        /// Colourful has several formulas for computing ΔE (difference between colors). The usage is trivial:
+        /// For more details, see the detailed XML documentation (generated during build), or the unit tests.
+        /// </summary>
+        private void ColorDifference()
+        {
+            //var color1 = new LabColor(l1, a1, b1);
+            //var color2 = new LabColor(l2, a2, b2);
+
+            //double deltaE = new CIEDE2000ColorDifference().ComputeDifference(color1, color2);
+        } // end ColorDifference
 
 
     }

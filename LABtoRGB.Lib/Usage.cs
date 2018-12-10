@@ -78,6 +78,18 @@ namespace LABtoRGB.Lib
             //double deltaE = new CIEDE2000ColorDifference().ComputeDifference(color1, color2);
         } // end ColorDifference
 
+        /// <summary>
+        /// Macbeth ColorChecker
+        /// Colourful contains definition of all 24 Macbeth ColorChecker colors in sRGB, which are useful for color calibration. Access them this way:
+        /// </summary>
+        private void MacbethColorChecker()
+        {
+            //RGBColor[] testColors = MacbethColorChecker.Colors; // array of 24 colors
+
+            //RGBColor testColor = MacbethColorChecker.DarkSkin; // individual colors
+        }
+
+
 
     }
 }

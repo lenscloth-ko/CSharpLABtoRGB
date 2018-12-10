@@ -24,6 +24,7 @@ namespace LABtoRGB.Lib
             var converter = new ColourfulConverter { TargetLabWhitePoint = Illuminants.D65 };
 
             LabColor output = converter.Adapt(input);
+
         }
     }
 }

@@ -18,18 +18,25 @@ namespace LABtoRGB.Lib
         {
             RGBColor input = new RGBColor(1, 0, 0);
 
-            var converter = new ColourfulConverter { WhitePoint = Illuminants.D65 };
+            var converter = new ColourfulConverter { WhitePoint = Illuminants.D50 };
 
             XYZColor output = converter.ToXYZ(input);
         } // end ColorConversion
 
-        public RGBColor GetLabToRGB()
+        /// <summary>
+        /// CIELAB color to RGB color 변환
+        /// </summary>
+        /// <param name="l">L(luminosity) - 명도축</param>
+        /// <param name="a">a - 빨강(Red) / 초록(Green) 의 보색(a complementary color)축</param>
+        /// <param name="b">b - 노랑(Yellow) / 파랑(Blue) 의 보색(a complementary color)축</param>
+        /// <returns>colorful.net RGBColor 형 반환</returns>
+        public LinearRGBColor LabToRGB(double l, double a, double b)
         {
-            LabColor input = new LabColor(10, 20, 30);
+            LabColor input = new LabColor(l, a, b);
 
-            var converter = new ColourfulConverter { WhitePoint = Illuminants.D65 };
+            var converter = new ColourfulConverter { WhitePoint = Illuminants.D50 };
 
-            RGBColor output = converter.ToRGB(input);
+            LinearRGBColor output = converter.ToLinearRGB(input);
 
             return output;
         }

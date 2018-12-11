@@ -23,13 +23,15 @@ namespace LABtoRGB.Lib
             XYZColor output = converter.ToXYZ(input);
         } // end ColorConversion
 
-        private void LabToRGB()
+        public RGBColor GetLabToRGB()
         {
             LabColor input = new LabColor(10, 20, 30);
 
             var converter = new ColourfulConverter { WhitePoint = Illuminants.D65 };
 
             RGBColor output = converter.ToRGB(input);
+
+            return output;
         }
 
         /// <summary>

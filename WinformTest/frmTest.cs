@@ -20,42 +20,41 @@ namespace WinformTest
 
         private void tbxLabColorL_KeyPress(object sender, KeyPressEventArgs e)
         {
-            onlyNum(sender, e);
+            TypingOnlyNumber(sender, e, true, false);
 
-
-            CalColor();
+            //CalColor();
         }
 
         private void tbxLabColorA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            onlyNum(sender, e);
+            TypingOnlyNumber(sender, e, true, true);
 
-            CalColor();
+            //CalColor();
         }
 
         private void tbxLabColorB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            onlyNum(sender, e);
+            TypingOnlyNumber(sender, e, true, true);
 
-            CalColor();
+            //CalColor();
         }
 
         private void CalColor()
         {
             double _L, _a, _b;
 
-            if (string.IsNullOrEmpty(tbxLabColorL.Text))
-            {
-                tbxLabColorL.Text = "0";
-            }
-            if (string.IsNullOrEmpty(tbxLabColorA.Text))
-            {
-                tbxLabColorA.Text = "0";
-            }
-            if (string.IsNullOrEmpty(tbxLabColorB.Text))
-            {
-                tbxLabColorB.Text = "0";
-            }
+            //if (string.IsNullOrEmpty(tbxLabColorL.Text))
+            //{
+            //    tbxLabColorL.Text = "0";
+            //}
+            //if (string.IsNullOrEmpty(tbxLabColorA.Text))
+            //{
+            //    tbxLabColorA.Text = "0";
+            //}
+            //if (string.IsNullOrEmpty(tbxLabColorB.Text))
+            //{
+            //    tbxLabColorB.Text = "0";
+            //}
 
             _L = double.Parse(tbxLabColorL.Text);
             _a = double.Parse(tbxLabColorA.Text);
@@ -73,16 +72,44 @@ namespace WinformTest
             tbxRGB_G.Text = rgb[1].ToString();
             tbxRGB_B.Text = rgb[2].ToString();
 
-
-
         }
 
-        private void onlyNum(object sender, KeyPressEventArgs e)
+        /// <summary>
+        /// 실수만
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="includePoint"></param>
+        /// <param name="includeMinus"></param>
+        public static void TypingOnlyNumber(object sender, KeyPressEventArgs e, bool includePoint, bool includeMinus)
         {
-            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))    //숫자와 백스페이스를 제외한 나머지를 바로 처리
+            bool isValidInput = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true;
+                if (includePoint == true) { if (e.KeyChar == '.') isValidInput = true; }
+                if (includeMinus == true) { if (e.KeyChar == '-') isValidInput = true; }
+
+                if (isValidInput == false) e.Handled = true;
             }
-        } // end onlyNum(object sender, KeyPressEventArgs e) 
+
+            if (includePoint == true)
+            {
+                if (e.KeyChar == '.' && (string.IsNullOrEmpty((sender as TextBox).Text.Trim()) || (sender as TextBox).Text.IndexOf('.') > -1)) e.Handled = true;
+            }
+            if (includeMinus == true)
+            {
+                if (e.KeyChar == '-' && (!string.IsNullOrEmpty((sender as TextBox).Text.Trim()) || (sender as TextBox).Text.IndexOf('-') > -1)) e.Handled = true;
+            }
+        } // end TypingOnlyNumber(object sender, KeyPressEventArgs e, bool includePoint, bool includeMinus)
+
+        /// <summary>
+        /// btnCalColor
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCalColor_Click(object sender, EventArgs e)
+        {
+            CalColor();
+        } // end btnCalColor_Click
     }
 }

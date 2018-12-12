@@ -71,9 +71,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LABtoRGB.Lib\LABtoRGB.Lib.csproj">
-      <Project>{443F7AC4-3361-4CFC-96CA-D0D4BFBC9C53}</Project>
-      <Name>LABtoRGB.Lib</Name>
+    <ProjectReference Include="..\LabToRGBColor.Lib\LabToRGBColor.Lib.csproj">
+      <Project>{a618b1ed-230e-46ff-acd1-31e4317d3756}</Project>
+      <Name>LabToRGBColor.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

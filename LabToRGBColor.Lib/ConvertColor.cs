@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LABtoRGB.Lib
+namespace LabToRGBColor.Lib
 {
     public class ConvertColor
     {

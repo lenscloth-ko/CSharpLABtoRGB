@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LABtoRGB.Lib", "LABtoRGB.Lib\LABtoRGB.Lib.csproj", "{443F7AC4-3361-4CFC-96CA-D0D4BFBC9C53}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{A6AED824-6328-444B-8E07-D91C507012E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{A6AED824-6328-444B-8E07-D91C507012E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinformTest", "WinformTest\WinformTest.csproj", "{DC23E006-A51E-4343-BCE5-34482E74D836}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTest", "WebTest\WebTest.csproj", "{C6631F31-3FD0-4902-BDB1-744240E6555F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabToRGBColor.Lib", "LabToRGBColor.Lib\LabToRGBColor.Lib.csproj", "{A618B1ED-230E-46FF-ACD1-31E4317D3756}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{443F7AC4-3361-4CFC-96CA-D0D4BFBC9C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{443F7AC4-3361-4CFC-96CA-D0D4BFBC9C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{443F7AC4-3361-4CFC-96CA-D0D4BFBC9C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{443F7AC4-3361-4CFC-96CA-D0D4BFBC9C53}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6AED824-6328-444B-8E07-D91C507012E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6AED824-6328-444B-8E07-D91C507012E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6AED824-6328-444B-8E07-D91C507012E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{C6631F31-3FD0-4902-BDB1-744240E6555F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6631F31-3FD0-4902-BDB1-744240E6555F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6631F31-3FD0-4902-BDB1-744240E6555F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A618B1ED-230E-46FF-ACD1-31E4317D3756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A618B1ED-230E-46FF-ACD1-31E4317D3756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A618B1ED-230E-46FF-ACD1-31E4317D3756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A618B1ED-230E-46FF-ACD1-31E4317D3756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

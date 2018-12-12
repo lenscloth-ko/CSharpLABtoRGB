@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LABtoRGB.Lib\LABtoRGB.Lib.csproj" />
+    <ProjectReference Include="..\LabToRGBColor.Lib\LabToRGBColor.Lib.csproj" />
   </ItemGroup>
 
 </Project>

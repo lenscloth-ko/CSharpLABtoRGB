@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabToRGBColor.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,7 +7,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using LABtoRGB.Lib;
 
 namespace WinformTest
 {
@@ -61,14 +61,20 @@ namespace WinformTest
             _a = double.Parse(tbxLabColorA.Text);
             _b = double.Parse(tbxLabColorB.Text);
 
-            //ConvertColor
+            ConvertColor cc = new ConvertColor();
 
-            for (int i = 0; i < cc; i++)
-            {
+            double[] rgb = new double[3];
 
-            }
+            //Array rgb = new Array[3];
 
-            
+            rgb = cc.GetLabToRGB(_L, _a, _b);
+
+            tbxRGB_R.Text = rgb[0].ToString();
+            tbxRGB_G.Text = rgb[1].ToString();
+            tbxRGB_B.Text = rgb[2].ToString();
+
+
+
         }
 
         private void onlyNum(object sender, KeyPressEventArgs e)

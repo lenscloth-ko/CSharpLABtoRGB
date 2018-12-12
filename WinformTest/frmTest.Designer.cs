@@ -74,7 +74,7 @@
             // tbxLabColorB
             // 
             this.tbxLabColorB.Location = new System.Drawing.Point(36, 122);
-            this.tbxLabColorB.MaxLength = 4;
+            this.tbxLabColorB.MaxLength = 10;
             this.tbxLabColorB.Name = "tbxLabColorB";
             this.tbxLabColorB.Size = new System.Drawing.Size(100, 21);
             this.tbxLabColorB.TabIndex = 3;
@@ -93,7 +93,7 @@
             // tbxLabColorA
             // 
             this.tbxLabColorA.Location = new System.Drawing.Point(36, 77);
-            this.tbxLabColorA.MaxLength = 4;
+            this.tbxLabColorA.MaxLength = 10;
             this.tbxLabColorA.Name = "tbxLabColorA";
             this.tbxLabColorA.Size = new System.Drawing.Size(100, 21);
             this.tbxLabColorA.TabIndex = 2;
@@ -112,7 +112,7 @@
             // tbxLabColorL
             // 
             this.tbxLabColorL.Location = new System.Drawing.Point(36, 32);
-            this.tbxLabColorL.MaxLength = 3;
+            this.tbxLabColorL.MaxLength = 10;
             this.tbxLabColorL.Name = "tbxLabColorL";
             this.tbxLabColorL.Size = new System.Drawing.Size(100, 21);
             this.tbxLabColorL.TabIndex = 1;

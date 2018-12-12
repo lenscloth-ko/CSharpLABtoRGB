@@ -1,11 +1,12 @@
-﻿using LabToRGBColor.Lib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
+using LabToRGBColor.Lib;
 
 
 namespace WinformTest
@@ -39,7 +40,7 @@ namespace WinformTest
             //CalColor();
         }
 
-        private void CalColor()
+        private void CalColor(bool previewColor)
         {
             double _L, _a, _b;
 
@@ -71,6 +72,12 @@ namespace WinformTest
             tbxRGB_R.Text = rgb[0].ToString();
             tbxRGB_G.Text = rgb[1].ToString();
             tbxRGB_B.Text = rgb[2].ToString();
+
+            if (previewColor)
+            {
+                pnlColorPreview.BackColor = Color.FromArgb(int.Parse(rgb[0].ToString()), int.Parse(rgb[1].ToString()), int.Parse(rgb[2].ToString()));
+            }
+            
 
         }
 
@@ -109,7 +116,10 @@ namespace WinformTest
         /// <param name="e"></param>
         private void btnCalColor_Click(object sender, EventArgs e)
         {
-            CalColor();
+            CalColor(true);
+
+            
+
         } // end btnCalColor_Click
     }
 }

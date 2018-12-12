@@ -57,10 +57,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="testWeb.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="testWeb.aspx.cs">
+      <DependentUpon>testWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testWeb.aspx.designer.cs">
+      <DependentUpon>testWeb.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LabToRGBColor.Lib\LabToRGBColor.Lib.csproj">
+      <Project>{a618b1ed-230e-46ff-acd1-31e4317d3756}</Project>
+      <Name>LabToRGBColor.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

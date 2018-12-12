@@ -77,6 +77,7 @@
             this.tbxLabColorL.Name = "tbxLabColorL";
             this.tbxLabColorL.Size = new System.Drawing.Size(100, 21);
             this.tbxLabColorL.TabIndex = 1;
+            this.tbxLabColorL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxLabColorL_KeyPress);
             // 
             // label2
             // 
@@ -93,6 +94,7 @@
             this.tbxLabColorA.Name = "tbxLabColorA";
             this.tbxLabColorA.Size = new System.Drawing.Size(100, 21);
             this.tbxLabColorA.TabIndex = 1;
+            this.tbxLabColorA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxLabColorA_KeyPress);
             // 
             // label3
             // 
@@ -109,6 +111,7 @@
             this.tbxLabColorB.Name = "tbxLabColorB";
             this.tbxLabColorB.Size = new System.Drawing.Size(100, 21);
             this.tbxLabColorB.TabIndex = 1;
+            this.tbxLabColorB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxLabColorB_KeyPress);
             // 
             // groupBox2
             // 
@@ -127,6 +130,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(36, 86);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
@@ -143,6 +147,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(36, 59);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 21);
@@ -159,6 +164,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(36, 32);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 21);
@@ -185,11 +191,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 450);
+            this.ClientSize = new System.Drawing.Size(375, 268);
             this.Controls.Add(this.pnlColorPreview);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTest";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

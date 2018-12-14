@@ -62,6 +62,8 @@
                         <td colspan="2"></td>
                         <td colspan="2">
                             <asp:Button ID="btnCalColor" runat="server" Text="변환" OnClick="btnCalColor_Click" Height="30" Width="100" />
+                            
+                            
                         </td>
                     </tr>
                     <tr>

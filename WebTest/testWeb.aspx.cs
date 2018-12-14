@@ -16,6 +16,17 @@ namespace WebTest
             var r = Request["rgb_r"];
             var g = Request["rgb_g"];
             var b = Request["rgb_b"];
+            var lab_l = Request["lab_l"];
+            var lab_a = Request["lab_a"];
+            var lab_b = Request["lab_b"];
+
+            tbxLabColorL.Text = lab_l;
+            tbxLabColorA.Text = lab_a;
+            tbxLabColorB.Text = lab_b;
+
+            tbxRGB_R.Text = r;
+            tbxRGB_G.Text = g;
+            tbxRGB_B.Text = b;
         }
 
         protected void tbxLabColorL_TextChanged(object sender, EventArgs e)
@@ -108,6 +119,8 @@ namespace WebTest
         protected void btnCalColor_Click(object sender, EventArgs e)
         {
             CalColor(true);
+            //form1.s
+            //btnCalColor_Click
         }
     }
 }

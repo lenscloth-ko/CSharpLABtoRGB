@@ -69,13 +69,13 @@ namespace WinformTest
 
             rgb = cc.GetLabToRGB(_L, _a, _b);
 
-            tbxRGB_R.Text = rgb[0].ToString();
-            tbxRGB_G.Text = rgb[1].ToString();
-            tbxRGB_B.Text = rgb[2].ToString();
+            tbxRGB_R.Text = rgb[0] < 0 ? "0" : rgb[0].ToString();
+            tbxRGB_G.Text = rgb[1] < 0 ? "0" : rgb[1].ToString();
+            tbxRGB_B.Text = rgb[2] < 0 ? "0" : rgb[2].ToString();
 
             if (previewColor)
             {
-                pnlColorPreview.BackColor = Color.FromArgb(int.Parse(rgb[0].ToString()), int.Parse(rgb[1].ToString()), int.Parse(rgb[2].ToString()));
+                pnlColorPreview.BackColor = Color.FromArgb(int.Parse(tbxRGB_R.Text), int.Parse(tbxRGB_G.Text), int.Parse(tbxRGB_B.Text));
             }
             
 
